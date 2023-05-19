@@ -17,5 +17,9 @@ namespace StacksAndQueues
         {
             queue.Display();
         }
+        public void Dequeue()
+        {
+            queue.DeleteFirst();
+        }
     }
 }

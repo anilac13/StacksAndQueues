@@ -64,5 +64,12 @@ namespace StacksAndQueues
             secondLast.next = null;
             Console.WriteLine($"Element popped is {lastNode.data}");
         }
+        public void DeleteFirst()
+        {
+            if (head == null)
+                return;
+            Node secondNode = head.next;
+            head = secondNode;
+        }
     }
 }

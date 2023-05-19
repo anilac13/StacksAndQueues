@@ -10,7 +10,7 @@ namespace StacksAndQueues
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nChoose option to perform \n1.Add elements to Stack \n2.Display \n3.Peek and Pop elements \n4.Add elements to Queue \n5.Exit");
+                Console.WriteLine("\nChoose option to perform \n1.Add elements to Stack \n2.Display \n3.Peek and Pop elements \n4.Add elements to Queue \n5.Delete element from Queue\n6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -33,6 +33,9 @@ namespace StacksAndQueues
                         queue.Enqueue(70);
                         break;
                     case 5:
+                        queue.Dequeue();
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
