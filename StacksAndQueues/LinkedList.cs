@@ -39,21 +39,30 @@ namespace StacksAndQueues
                 temp = temp.next;
             }
         }
-        public void Delete(int data)
+        public void PeekElement()
         {
-            Node prevNode = head;
-            Node currentNode = head.next;
-            while (currentNode.data != data)
+            Node temp = head;
+            if (head == null)
+                return;
+            while (temp.next != null)
             {
-                if (currentNode.next == null)
-                {
-                    Console.WriteLine($"The {data} element is not there in Linked list");
-                    return;
-                }
-                prevNode = currentNode;
-                currentNode = currentNode.next;
+                temp = temp.next;
             }
-            prevNode.next = currentNode.next;
+            Console.WriteLine($"Peek element in Stack is {temp.data}");
+        }
+        public void DeleteLast()
+        {
+            if (head == null)
+                return;
+            Node secondLast = head;
+            Node lastNode = head.next;
+            while (lastNode.next != null)
+            {
+                secondLast = lastNode;
+                lastNode = lastNode.next;
+            }
+            secondLast.next = null;
+            Console.WriteLine($"Element popped is {lastNode.data}");
         }
     }
 }

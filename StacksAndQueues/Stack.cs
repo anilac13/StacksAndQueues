@@ -17,5 +17,13 @@ namespace StacksAndQueues
         {
             stack.Display();
         }
+        public void Peek()
+        {
+            stack.PeekElement();
+        }
+        public void Pop()
+        {
+            stack.DeleteLast();
+        }
     }
 }
